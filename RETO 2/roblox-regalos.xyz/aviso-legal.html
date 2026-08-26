@@ -6,9 +6,13 @@
   <title>Aviso Legal · Roblox Regalos</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-window.addEventListener('load', function() {
-  window.scrollTo(0, 0);
+ <script>
+document.querySelectorAll('a').forEach(function(enlace) {
+  enlace.addEventListener('click', function() {
+    window.parent.postMessage({
+      type: 'embedded-resource-nav'
+    }, '*');
+  });
 });
 </script>
 <body>
