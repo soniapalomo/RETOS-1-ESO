@@ -6,14 +6,18 @@
   <title>Verificación · Roblox Regalos</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-document.querySelectorAll('a').forEach(function(enlace) {
-  enlace.addEventListener('click', function() {
-    window.parent.postMessage({
-      type: 'embedded-resource-nav'
-    }, '*');
+ <script>
+(function () {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  window.scrollTo(0, 0);
+
+  window.addEventListener('pageshow', function () {
+    window.scrollTo(0, 0);
   });
-});
+})();
 </script>
 <body>
   <header>
