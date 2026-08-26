@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <script>
-document.querySelectorAll('a').forEach(enlace => {
+<script>
+document.querySelectorAll('a').forEach(function(enlace) {
   enlace.addEventListener('click', function() {
-    window.scrollTo(0, 0);
+    window.parent.postMessage({
+      type: 'embedded-resource-nav'
+    }, '*');
   });
 });
 </script>
