@@ -80,10 +80,9 @@ a:hover {
   text-decoration: underline;
 }
 
-main {
-  padding: 48px 0 56px;
+main { 
+  padding: 28px 0 30px; 
 }
-
 .hero,
 .content {
   background: var(--panel);
@@ -148,8 +147,8 @@ li {
 
 .notice,
 .code {
-  margin-top: 24px;
-  padding: 18px;
+   margin-top: 14px; 
+  padding: 10px 14px; 
   border-radius: 8px;
   background: #f8fbff;
   border: 1px solid var(--line);
@@ -200,16 +199,15 @@ footer {
   }
 }
 
-.popup-stack {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 10;
-  display: grid;
-  gap: 12px;
-  width: min(300px, calc(100vw - 36px));
+.popup-stack { 
+  position: fixed; 
+  right: 18px; 
+  bottom: 100px; 
+  z-index: 10; 
+  display: grid; 
+  gap: 12px; 
+  width: min(300px, calc(100vw - 36px)); 
 }
-
 .popup {
   padding: 14px 16px;
   border: 2px solid var(--accent);
