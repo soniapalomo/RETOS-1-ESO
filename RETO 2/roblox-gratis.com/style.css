@@ -74,9 +74,8 @@ a:hover {
 }
 
 main {
-  padding: 46px 0 58px;
+  padding: 25px 0 20px;
 }
-
 .panel {
   background: var(--surface);
   border: 1px solid var(--line);
