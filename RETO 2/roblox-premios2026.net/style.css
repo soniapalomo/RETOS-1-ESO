@@ -176,10 +176,10 @@ li {
   letter-spacing: 0.08em;
 }
 
-footer {
-  padding: 20px 0 34px;
-  color: #7a8290;
-  font-size: 13px;
+footer { 
+  padding: 8px 0 20px; 
+  color: #7a8290; 
+  font-size: 13px; 
 }
 
 @media (max-width: 700px) {
