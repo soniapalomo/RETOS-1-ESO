@@ -81,7 +81,7 @@ a:hover {
 }
 
 main { 
-  padding: 28px 0 30px; 
+  padding: 20px 0 8px; 
 }
 .hero,
 .content {
@@ -177,7 +177,7 @@ li {
 }
 
 footer { 
-  padding: 8px 0 20px; 
+  padding: 4px 0 10px; 
   color: #7a8290; 
   font-size: 13px; 
 }
@@ -202,7 +202,7 @@ footer {
 .popup-stack { 
   position: fixed; 
   right: 18px; 
-  top: 85px; 
+  top: 76px; 
   bottom: auto;
   z-index: 10; 
   display: grid; 
