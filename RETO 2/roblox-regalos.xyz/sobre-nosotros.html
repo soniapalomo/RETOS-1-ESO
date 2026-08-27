@@ -8,15 +8,19 @@
 </head>
 <script>
 (function () {
-  function avisarCiberretos() {
-    window.parent.postMessage({
-      type: 'regalos-scroll-top'
-    }, '*');
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
   }
-
-  window.addEventListener('load', avisarCiberretos);
-
-  window.addEventListener('pageshow', avisarCiberretos);
+  function forceScrollTop() {
+    window.scrollTo(0, 0);
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ ciberretosScrollTop: true }, '*');
+      }
+    } catch (e) {}
+  }
+  forceScrollTop();
+  window.addEventListener('pageshow', forceScrollTop);
 })();
 </script>
 <body>
