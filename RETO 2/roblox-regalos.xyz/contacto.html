@@ -7,19 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head><script>
 (function () {
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
+  function avisarCiberretos() {
+    window.parent.postMessage({
+      type: 'regalos-scroll-top'
+    }, '*');
   }
-  function forceScrollTop() {
-    window.scrollTo(0, 0);
-    try {
-      if (window.parent && window.parent !== window) {
-        window.parent.postMessage({ ciberretosScrollTop: true }, '*');
-      }
-    } catch (e) {}
-  }
-  forceScrollTop();
-  window.addEventListener('pageshow', forceScrollTop);
+
+  window.addEventListener('load', avisarCiberretos);
+
+  window.addEventListener('pageshow', avisarCiberretos);
 })();
 </script>
 <body>
