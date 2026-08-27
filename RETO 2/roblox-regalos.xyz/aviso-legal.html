@@ -11,12 +11,16 @@
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
-
-  window.scrollTo(0, 0);
-
-  window.addEventListener('pageshow', function () {
+  function forceScrollTop() {
     window.scrollTo(0, 0);
-  });
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ ciberretosScrollTop: true }, '*');
+      }
+    } catch (e) {}
+  }
+  forceScrollTop();
+  window.addEventListener('pageshow', forceScrollTop);
 })();
 </script>
 <body>
