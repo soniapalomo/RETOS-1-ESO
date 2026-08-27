@@ -5,18 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto · Roblox Regalos</title>
   <link rel="stylesheet" href="style.css">
-</head>
-  <script>
+</head><script>
 (function () {
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
-
-  window.scrollTo(0, 0);
-
-  window.addEventListener('pageshow', function () {
+  function forceScrollTop() {
     window.scrollTo(0, 0);
-  });
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ ciberretosScrollTop: true }, '*');
+      }
+    } catch (e) {}
+  }
+  forceScrollTop();
+  window.addEventListener('pageshow', forceScrollTop);
 })();
 </script>
 <body>
